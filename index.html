@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The BIG Blueprint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive;
+      background-color: #fff8f0;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+    nav a {
+      color: #c0392b;
+      text-decoration: none;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #c0392b;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .basketball {
+      width: 60px;
+      animation: rollAcross 3s ease-in-out forwards;
+      position: absolute;
+      top: 80px;
+      left: -100px;
+    }
+    @keyframes rollAcross {
+      0% { left: -100px; transform: rotate(0); }
+      100% { left: 100%; transform: rotate(720deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://png.pngtree.com/element_our/20200611/ourmid/pngtree-astronaut-spaceflight-image_2250577.jpg" height="60">
+    <nav>
+      <ul>
+        <li><a href="about.html">Who is Cal</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </nav>
+    <img src="https://www.vecteezy.com/png/20906787-astronaut-with-flag-icon-illustration-outline-style-design-on-transparent-background" height="60">
+  </header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Basketball.png" alt="basketball" class="basketball" />
+  <div class="hero">
+    <h1>Welcome to The BIG Blueprint</h1>
+    <p>Created for the often-overlooked bigs — power forwards, centers, and tweeners who need dedicated, fundamental training to elevate their game and get seen.</p>
+  </div>
+  <div class="section">
+    <h2>My Story</h2>
+    <p>I was a scrawny, taller-than-average kid who never quite fit into the traditional training mold. I tagged along in workouts meant for guards or wings, but knew I’d one day be a forward or center. So I trained myself — parks, gyms, whatever it took to polish the skills I needed. The BIG Blueprint is the program I wish I had growing up. Built for you.</p>
+
+    <h2>Our Mission</h2>
+    <p>To give young bigs the training, tools, and clarity they need to succeed in today’s evolving game. While the NBA is more dynamic than ever, one thing stays the same — being elite in your role matters. Let’s define it together.</p>
+
+    <h2>Why I’m Here for You</h2>
+    <ul>
+      <li>Position-specific drills and IQ</li>
+      <li>Confidence through repetition</li>
+      <li>Adaptability for modern basketball</li>
+      <li>Insight from a pro who’s lived it</li>
+    </ul>
+
+    <h2>Is This for You?</h2>
+    <p>If you're a tall kid who’s always played “everywhere,” this is your lane. If you’ve been told to just run the floor, set screens, or stand in the paint — and you want more — you’re in the right place. This is for the kids and families who want to define their role, refine their tools, and elevate their chances of being seen. </p>
+
+    <p><strong>If that sounds like you, head to the <a href="products.html">Products</a> page to pick your package and let’s get started.</strong></p>
+  </div>
+</body>
+</html>
