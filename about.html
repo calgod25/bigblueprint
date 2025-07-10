@@ -1,76 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Who is Cal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who is Cal | The BIG Blueprint</title>
   <style>
     body {
-      font-family: 'Comic Neue', cursive;
-      background: #fff8f0 url('https://www.transparenttextures.com/patterns/stardust.png');
-      color: #333;
       margin: 0;
-      padding: 0;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: white;
-      padding: 1rem 2rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      padding: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: #c0392b;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fff6f0;
+      color: #2d2d2d;
       position: relative;
+      overflow-x: hidden;
     }
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #c0392b;
+
+    .bg-image {
+      position: fixed;
+      top: 0;
       left: 0;
-      bottom: -4px;
-      transition: 0.3s ease;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      opacity: 0.55;
+      z-index: -1;
     }
-    nav a:hover::after {
-      width: 100%;
+
+    header {
+      background-color: #bc4e3c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 1;
     }
+
     h1 {
-      color: #c0392b;
+      font-size: 2.5em;
+      color: #bc4e3c;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Background Dunk Image -->
+  <img src="images/iadunk.jpg" alt="Calvin Godfrey Dunk" class="bg-image" />
+
   <header>
-    <img src="https://png.pngtree.com/element_our/20200611/ourmid/pngtree-astronaut-spaceflight-image_2250577.jpg" height="60">
-    <nav>
-      <ul>
-        <li><a href="about.html">Who is Cal</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-    <img src="https://www.vecteezy.com/png/20906787-astronaut-with-flag-icon-illustration-outline-style-design-on-transparent-background" height="60">
-  </header>
-  <div class="section">
     <h1>Who is Cal</h1>
-    <p>Calvin Godfrey is a USA-Palestinian professional basketball player known for his versatility, athleticism, and resilience. Having played both domestically and internationally, Cal brings real-world experience and insight to the court.</p>
-    <p>He played Division I basketball at Iowa State and Southern University. His professional career has taken him across the globe, where he's earned a reputation as a dependable and impactful big man.</p>
-    <p>Drawing from his own journey—starting as a raw, tall, under-coached young athlete—Cal founded The BIG Blueprint to bridge the gap in training for Power Forwards and Centers. This program is his way of giving back, shaping the next generation of elite bigs who are smart, skilled, and positionally confident.</p>
+  </header>
+
+  <div class="content">
+    <p>Calvin Godfrey is a USA-Palestinian professional basketball player and proven big man with over a decade of experience playing overseas. Known for his tenacity and versatility as a power forward, Cal has competed across Europe and the Middle East, leaving his mark on every team he’s played for.</p>
+
+    <p>He’s dedicated his post-playing career to building the next generation of bigs—those who don’t always fit the mold, but who can dominate when given the right tools. From personal experience growing up without position-specific training, Cal created The BIG Blueprint to give young bigs and tweeners the roadmap he never had.</p>
+
+    <p>This platform is the result of years of in-game learning, gritty off-court self-development, and a commitment to helping others break through. Whether you’re a future rim protector or a hybrid forward with bounce and brains—Cal's blueprint was made for you.</p>
   </div>
 </body>
 </html>
