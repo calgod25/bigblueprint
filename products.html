@@ -1,133 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Training Packages</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training Packages | The BIG Blueprint</title>
   <style>
     body {
-      font-family: 'Comic Neue', cursive;
-      background: #fff8f0 url('https://www.transparenttextures.com/patterns/stardust.png');
-      color: #333;
+      font-family: 'Comic Sans MS', sans-serif;
       margin: 0;
+      padding: 0;
+      background: #fff6f0;
+      color: #2d2d2d;
     }
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: white;
+      background-color: #bc4e3c;
+      padding: 20px;
+      color: white;
+      text-align: center;
     }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-      padding: 0;
+    h1 {
+      font-size: 2em;
+      margin: 0;
     }
-    nav a {
-      text-decoration: none;
-      color: #c0392b;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #c0392b;
-      left: 0;
-      bottom: -4px;
-      transition: 0.3s ease;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
     .package {
+      background: #fff;
+      border-left: 6px solid #bc4e3c;
+      border-radius: 6px;
+      padding: 20px;
       margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .btn {
-      padding: 10px 20px;
-      background: #c0392b;
+    .package h2 {
+      margin-top: 0;
+      color: #bc4e3c;
+    }
+    button {
+      background-color: #bc4e3c;
       color: white;
       border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 1rem;
-    }
-    form {
-      margin-top: 40px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      font-family: 'Comic Neue', cursive;
     }
     .modal {
       display: none;
       position: fixed;
-      top: 30%;
-      left: 30%;
-      background: white;
-      border: 2px solid #c0392b;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
       padding: 20px;
-      z-index: 10;
+      border: 2px solid #bc4e3c;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .modal-content h3 {
+      margin-top: 0;
+      color: #bc4e3c;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 40px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
     }
   </style>
-  <script>
-    function showModal() {
-      document.getElementById('checkoutModal').style.display = 'block';
-    }
-  </script>
 </head>
 <body>
   <header>
-    <img src="https://png.pngtree.com/element_our/20200611/ourmid/pngtree-astronaut-spaceflight-image_2250577.jpg" height="60">
-    <nav>
-      <ul>
-        <li><a href="about.html">Who is Cal</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-    <img src="https://www.vecteezy.com/png/20906787-astronaut-with-flag-icon-illustration-outline-style-design-on-transparent-background" height="60">
+    <h1>Choose Your Training Package</h1>
   </header>
 
-  <div class="section">
-    <h1>Training Packages</h1>
-
+  <section>
     <div class="package">
-      <h2>Beginner Package – $200</h2>
-      <button class="btn" onclick="showModal()">Let’s Get It</button>
-    </div>
-
-    <div class="package">
-      <h2>Beginner + Intermediate Package – $350</h2>
-      <button class="btn" onclick="showModal()">Let’s Get It</button>
+      <h2>Beginner Package — $200</h2>
+      <p>Perfect for newer bigs looking to build a foundation. Learn how to post up, call for the ball with authority, and finish with both hands using jump hooks and drop steps. Includes 6 core drills you can build your bag on.</p>
+      <button onclick="openModal()">Let’s Get It</button>
     </div>
 
     <div class="package">
-      <h2>All Packages Deal – $500</h2>
-      <button class="btn" onclick="showModal()">Let’s Get It</button>
+      <h2>Beginner + Intermediate Package — $350</h2>
+      <p>This combo includes all beginner drills, plus defensive positioning, rebounding IQ, rim protection, how to read weak side actions, and counter moves on the block. Designed for tweeners or growing bigs looking to gain an edge.</p>
+      <button onclick="openModal()">Let’s Get It</button>
     </div>
 
-    <div id="checkoutModal" class="modal">
-      <p><strong>Let’s Get It</strong></p>
-      <p>Send payment to PayPal: <strong>paypal.me/calgod</strong></p>
+    <div class="package">
+      <h2>Full Access (All 3 Levels) — $450</h2>
+      <p>Everything from Beginner to Advanced, bundled for savings. Advanced post footwork, short roll reads, 5-out spacing, transition rim running, and developing as a big who can guard multiple positions. Built for the modern center or forward.</p>
+      <button onclick="openModal()">Let’s Get It</button>
     </div>
+  </section>
 
-    <form action="https://formspree.io/f/mqkrzknv" method="POST">
-      <h2>Have Questions? Submit an Inquiry</h2>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="What would you like to know?" rows="4" required></textarea>
-      <button type="submit" class="btn">Submit</button>
+  <!-- Inquiry Form -->
+  <section>
+    <h2 style="color:#bc4e3c;">Not Sure? Submit an Inquiry</h2>
+    <form action="https://formspree.io/f/mjvnvkzk" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Tell me about your goals or ask a question..."></textarea>
+      <button type="submit">Send Inquiry</button>
     </form>
+  </section>
+
+  <!-- Modal -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <h3>Let’s Get It</h3>
+      <p>You’ll be redirected to complete payment via PayPal.</p>
+      <a href="https://www.paypal.me/calgod" target="_blank">
+        <button>Proceed to PayPal</button>
+      </a>
+      <br><br>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
   </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("checkoutModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("checkoutModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("checkoutModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
