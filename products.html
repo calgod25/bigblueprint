@@ -2,154 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Training Packages | The BIG Blueprint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Training Packages – The BIG Blueprint</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fff6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff7f0;
       color: #2d2d2d;
     }
+
     header {
       background-color: #bc4e3c;
-      padding: 20px;
       color: white;
+      padding: 20px;
       text-align: center;
     }
-    h1 {
-      font-size: 2em;
-      margin: 0;
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: 0 auto;
+
+    h1, h2 {
+      color: #bc4e3c;
     }
+
     .package {
-      background: #fff;
-      border-left: 6px solid #bc4e3c;
-      border-radius: 6px;
+      border: 2px solid #bc4e3c;
+      border-radius: 10px;
       padding: 20px;
       margin-bottom: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: #fcd2b2;
     }
-    .package h2 {
+
+    .package h3 {
       margin-top: 0;
-      color: #bc4e3c;
     }
-    button {
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
       background-color: #bc4e3c;
       color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 10px;
+      text-decoration: none;
       border-radius: 5px;
-      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
+
+    .button:hover::after {
+      content: '';
+      position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
       height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.4);
+      width: 100%;
+      background: rgba(255,255,255,0.2);
+      animation: loadBar 0.4s forwards;
     }
-    .modal-content {
-      background-color: #fff;
-      margin: 15% auto;
-      padding: 20px;
-      border: 2px solid #bc4e3c;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      text-align: center;
+
+    @keyframes loadBar {
+      from { width: 0; }
+      to { width: 100%; }
     }
-    .modal-content h3 {
-      margin-top: 0;
-      color: #bc4e3c;
-    }
+
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      background-color: #ffe9db;
+      padding: 20px;
+      border-radius: 10px;
       margin-top: 40px;
     }
+
     input, textarea {
+      width: 100%;
       padding: 10px;
-      border-radius: 5px;
+      margin: 10px 0;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      font-size: 1em;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    input[type="submit"] {
+      background-color: #bc4e3c;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #9b3c2c;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Choose Your Training Package</h1>
+    <h1>Training Packages</h1>
+    <p>Pick the right blueprint for your game.</p>
   </header>
 
-  <section>
+  <div class="section">
     <div class="package">
-      <h2>Beginner Package — $200</h2>
-      <p>Perfect for newer bigs looking to build a foundation. Learn how to post up, call for the ball with authority, and finish with both hands using jump hooks and drop steps. Includes 6 core drills you can build your bag on.</p>
-      <button onclick="openModal()">Let’s Get It</button>
+      <h3>Beginner Package – $200</h3>
+      <p>Perfect for young players starting out at the forward or center position. This includes: post positioning, calling for the ball, basic footwork, and beginner-level shooting drills.</p>
+      <a class="button" href="https://www.paypal.me/calgod/200" target="_blank">Let’s Get It</a>
     </div>
 
     <div class="package">
-      <h2>Beginner + Intermediate Package — $350</h2>
-      <p>This combo includes all beginner drills, plus defensive positioning, rebounding IQ, rim protection, how to read weak side actions, and counter moves on the block. Designed for tweeners or growing bigs looking to gain an edge.</p>
-      <button onclick="openModal()">Let’s Get It</button>
+      <h3>Beginner + Intermediate – $350</h3>
+      <p>This bundle adds intermediate drills including: drop steps, jump hooks with both hands, mid-range shooting mechanics, and rim protection footwork. It includes everything from the Beginner package too.</p>
+      <a class="button" href="https://www.paypal.me/calgod/350" target="_blank">Let’s Get It</a>
     </div>
 
     <div class="package">
-      <h2>Full Access (All 3 Levels) — $450</h2>
-      <p>Everything from Beginner to Advanced, bundled for savings. Advanced post footwork, short roll reads, 5-out spacing, transition rim running, and developing as a big who can guard multiple positions. Built for the modern center or forward.</p>
-      <button onclick="openModal()">Let’s Get It</button>
+      <h3>Full Access – $450</h3>
+      <p>Our best value. This deal gives you everything: beginner, intermediate, and advanced-level training covering defensive switches, conditioning for bigs, elite positioning, and live session invites when available.</p>
+      <a class="button" href="https://www.paypal.me/calgod/450" target="_blank">Let’s Get It</a>
     </div>
-  </section>
 
-  <!-- Inquiry Form -->
-  <section>
-    <h2 style="color:#bc4e3c;">Not Sure? Submit an Inquiry</h2>
-    <form action="https://formspree.io/f/mjvnvkzk" method="POST">
-      <input type="text" name="name" placeholder="Your Full Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Tell me about your goals or ask a question..."></textarea>
-      <button type="submit">Send Inquiry</button>
+    <form action="https://formsubmit.co/wfmcalgod@gmail.com" method="POST">
+      <h2>Have a Question? Submit an Inquiry</h2>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Type your question here..." required></textarea>
+      <input type="submit" value="Submit">
     </form>
-  </section>
-
-  <!-- Modal -->
-  <div id="checkoutModal" class="modal">
-    <div class="modal-content">
-      <h3>Let’s Get It</h3>
-      <p>You’ll be redirected to complete payment via PayPal.</p>
-      <a href="https://www.paypal.me/calgod" target="_blank">
-        <button>Proceed to PayPal</button>
-      </a>
-      <br><br>
-      <button onclick="closeModal()">Cancel</button>
-    </div>
   </div>
 
-  <script>
-    function openModal() {
-      document.getElementById("checkoutModal").style.display = "block";
-    }
-    function closeModal() {
-      document.getElementById("checkoutModal").style.display = "none";
-    }
-    window.onclick = function(event) {
-      const modal = document.getElementById("checkoutModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
 </body>
 </html>
