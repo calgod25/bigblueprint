@@ -1,116 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The BIG Blueprint</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Neue', cursive;
-      background-color: #fff8f0;
-      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-      background-size: cover;
-      color: #333;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff7f0;
+      color: #2d2d2d;
     }
+
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: #fff;
-    }
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-    }
-    nav a {
-      color: #c0392b;
-      text-decoration: none;
       position: relative;
+      background-color: #bc4e3c;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      overflow: hidden;
     }
-    nav a::after {
+
+    header img.icon {
+      height: 60px;
+      position: absolute;
+      top: 10px;
+    }
+
+    .astronaut {
+      left: 10px;
+    }
+
+    .rocket {
+      right: 10px;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      color: #bc4e3c;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .cta {
+      background-color: #fcd2b2;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #bc4e3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta a:hover::after {
       content: '';
       position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #c0392b;
       left: 0;
-      bottom: -4px;
-      transition: 0.3s ease;
-    }
-    nav a:hover::after {
+      top: 0;
+      height: 100%;
       width: 100%;
+      background: rgba(255,255,255,0.2);
+      animation: loadBar 0.5s forwards;
     }
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
+
+    @keyframes loadBar {
+      from { width: 0; }
+      to { width: 100%; }
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+
+    /* Basketball Animation */
     .basketball {
-      width: 60px;
-      animation: rollAcross 3s ease-in-out forwards;
       position: absolute;
-      top: 80px;
+      top: 0;
       left: -100px;
+      width: 50px;
+      animation: bounceBall 5s ease-in-out forwards;
     }
-    @keyframes rollAcross {
-      0% { left: -100px; transform: rotate(0); }
-      100% { left: 100%; transform: rotate(720deg); }
+
+    @keyframes bounceBall {
+      0% { left: -100px; top: 10px; }
+      25% { top: 60px; }
+      50% { top: 10px; left: 40%; }
+      75% { top: 60px; }
+      100% { left: 110%; top: 10px; }
+    }
+
+    @media screen and (max-width: 768px) {
+      header img.icon {
+        height: 40px;
+      }
+
+      .basketball {
+        width: 35px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
-    <img src="https://png.pngtree.com/element_our/20200611/ourmid/pngtree-astronaut-spaceflight-image_2250577.jpg" height="60">
-    <nav>
-      <ul>
-        <li><a href="about.html">Who is Cal</a></li>
-        <li><a href="products.html">Products</a></li>
-      </ul>
-    </nav>
-    <img src="https://www.vecteezy.com/png/20906787-astronaut-with-flag-icon-illustration-outline-style-design-on-transparent-background" height="60">
+    <img src="images/astronaut.png" class="icon astronaut" alt="Astronaut" />
+    <img src="images/rocket.png" class="icon rocket" alt="Rocket" />
+    <img src="images/basketball.png" alt="Basketball" class="basketball" />
+    <h1>The BIG Blueprint</h1>
+    <p>A campaign crafted for the growth of BIGS — because your position matters.</p>
   </header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Basketball.png" alt="basketball" class="basketball" />
-  <div class="hero">
-    <h1>Welcome to The BIG Blueprint</h1>
-    <p>Created for the often-overlooked bigs — power forwards, centers, and tweeners who need dedicated, fundamental training to elevate their game and get seen.</p>
-  </div>
+
+  <!-- MY STORY -->
   <div class="section">
     <h2>My Story</h2>
-    <p>I was a scrawny, taller-than-average kid who never quite fit into the traditional training mold. I tagged along in workouts meant for guards or wings, but knew I’d one day be a forward or center. So I trained myself — parks, gyms, whatever it took to polish the skills I needed. The BIG Blueprint is the program I wish I had growing up. Built for you.</p>
-
-    <h2>Our Mission</h2>
-    <p>To give young bigs the training, tools, and clarity they need to succeed in today’s evolving game. While the NBA is more dynamic than ever, one thing stays the same — being elite in your role matters. Let’s define it together.</p>
-
-    <h2>Why I’m Here for You</h2>
-    <ul>
-      <li>Position-specific drills and IQ</li>
-      <li>Confidence through repetition</li>
-      <li>Adaptability for modern basketball</li>
-      <li>Insight from a pro who’s lived it</li>
-    </ul>
-
-    <h2>Is This for You?</h2>
-    <p>If you're a tall kid who’s always played “everywhere,” this is your lane. If you’ve been told to just run the floor, set screens, or stand in the paint — and you want more — you’re in the right place. This is for the kids and families who want to define their role, refine their tools, and elevate their chances of being seen. </p>
-
-    <p><strong>If that sounds like you, head to the <a href="products.html">Products</a> page to pick your package and let’s get started.</strong></p>
+    <p>I grew up as a scrawny kid who just happened to be taller than everyone around me. I was constantly tossed into random training sessions because of my athleticism, but none of them were tailored to the position I would actually play: Power Forward or Center. That meant I had to spend years on my own, grinding in gyms and parks, building up the skillset I needed to thrive in the paint — learning from trial, error, and passion. This is the blueprint I wish I had back then.</p>
   </div>
+
+  <!-- MISSION -->
+  <div class="section">
+    <h2>Mission</h2>
+    <p>The BIG Blueprint is here to solve a gap in basketball development: training for bigs. Our mission is to provide a clear foundation for Power Forwards and Centers — the footwork, awareness, defense, and finishing skills that define impact in the paint. We believe that polishing your positional game is the clearest path to being seen, evaluated, and respected at the next level.</p>
+  </div>
+
+  <!-- PILLARS -->
+  <div class="section">
+    <h2>Why I'm Here for You</h2>
+    <ul>
+      <li>Because bigs deserve their own lane in training — not just guard work repurposed</li>
+      <li>Because tweeners need direction, not confusion</li>
+      <li>Because proper fundamentals will outlast trends</li>
+      <li>Because when you know your role, you stand out</li>
+    </ul>
+  </div>
+
+  <!-- IS THIS FOR YOU -->
+  <div class="section">
+    <h2>Is This for You?</h2>
+    <p>Ask yourself:</p>
+    <ul>
+      <li>Are you the tallest on your team — and still feel overlooked?</li>
+      <li>Do your coaches work more with guards than with bigs?</li>
+      <li>Have you been stuck between positions — unsure where you fit?</li>
+      <li>Do you want to learn how to be elite in YOUR zone?</li>
+    </ul>
+    <p>If that sounds like you or your child, then YES — you're in the right place.</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="section cta">
+    <h2>Take the First Step</h2>
+    <p>Explore our digital packages or check out upcoming pop-up training camps in Houston (Aug 3 – Sep 3). Let’s make your blueprint real.</p>
+    <a href="products.html">See Packages</a><br><br>
+    <a href="about.html">Who is Cal?</a>
+  </div>
+
 </body>
 </html>
